@@ -12,31 +12,31 @@ public class Coche extends Vehiculo {
 		setKilometros(kilometros);
 		setDeposito(deposito);
 	}
-	
+	@Override
 	public void info() {
 		System.out.println("************************");
-		System.out.println("Coche");
-		System.out.println(marca);
-		System.out.println(matricula);
-		System.out.println(kilometros);
-		System.out.println(deposito);
+		System.out.println("Tipo: Coche");
+		System.out.println("Marca: "+marca);
+		System.out.println("Matricula: "+matricula);
+		System.out.println("Kilometros: "+kilometros);
+		System.out.println("Deposito: "+deposito);
 		System.out.println("************************");
 	}
-	
+	@Override
 	public void avance() {
-		if (deposito > 0) {
+		if (deposito >= 2) {
 			deposito -= 2;
-			System.out.println("El vehiculo se desplaza");
 			kilometros += 25;
+			System.out.println("El vehiculo se desplaza 25km");
 		} else {
-			System.out.println("No tiene gasolina");
+			System.out.println("No tiene suficiente gasolina");
 		}
 	}
-	
+	@Override
 	public void llenado() {
 		if (deposito < 10) {
-			System.out.println("Deposito lleno");
 			deposito = 10;
+			System.out.println("Deposito lleno a su maxima capacidad de "+deposito+"L");
 		} else {
 			System.out.println("El deposito ya esta lleno");
 		}

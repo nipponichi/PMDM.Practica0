@@ -2,7 +2,8 @@ package practica0;
 
 import java.util.Scanner;
 
-public class Vehiculo {
+//Clase vehículo
+public abstract class Vehiculo {
 	
 	private String marca;
 	private String matricula;
@@ -13,6 +14,7 @@ public class Vehiculo {
 	static Moto moto = new Moto();
 	static Camion camion = new Camion();
 	
+	//Constructores de vehículo
 	Vehiculo(){
 		
 	}
@@ -24,6 +26,12 @@ public class Vehiculo {
 		this.deposito = deposito;
 	}
 	
+	//Métodos
+    public abstract void info();
+    public abstract void avance();
+    public abstract void llenado();
+	
+    //Setters y Getters.
 	public String getMarca() {
 		return marca;
 	}
@@ -55,16 +63,17 @@ public class Vehiculo {
 	public void setDeposito(int deposito) {
 		this.deposito = deposito;
 	}
-
 	
-	
+	//Metodo main
 	public static void main(String[] args) {
 		menu();
 	}
 	
+	//Menu inicial
 	static void menu() {
 		int seleccion;
 		boolean esMenu = false;
+		Scanner sc = new Scanner(System.in);
 		
 		do {
 			System.out.println("Selecciona una opcion:"
@@ -73,7 +82,6 @@ public class Vehiculo {
 				+ "\n3.Llenar depositos"
 				+ "\n4.Salir");
 		
-			Scanner sc = new Scanner(System.in);
 			seleccion = sc.nextInt();
 		
 			switch(seleccion) {
@@ -93,6 +101,7 @@ public class Vehiculo {
 					System.out.println("Selecciona una opcion valida");
 					esMenu = true;
 			}
+			sc.close();
 		}while(esMenu);
 	}
 	
