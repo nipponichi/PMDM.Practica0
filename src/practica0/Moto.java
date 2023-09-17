@@ -2,51 +2,24 @@ package practica0;
 
 //Clase Moto hereda de vehículo
 public class Moto extends Vehiculo {
+	private String tipo = "Moto";
 	private String marca = "Ural";
 	private String matricula = "6469CLK";
 	private long kilometros = 16000;
 	private int deposito = 15;
-	
+	private int consumo = 1;
+	private int distancia = 25;
+	private int depositoLleno = deposito;
+			
 	//Constructor clase Moto
 	Moto(){
-		setMarca(this.marca);
-		setMatricula(this.matricula);
-		setKilometros(this.kilometros);
-		setDeposito(this.deposito);
+		setTipo(tipo);
+		setMarca(marca);
+		setMatricula(matricula);
+		setKilometros(kilometros);
+		setDeposito(deposito);
+		setConsumo(consumo);
+		setDistancia(distancia);
+		setDepositoLleno(depositoLleno);
 	}
-	
-	//Obtenemos la información del vehículo.
-	@Override
-	public void info() {
-		System.out.println("************************");
-		System.out.println("Tipo: Moto");
-		System.out.println("Marca: "+marca);
-		System.out.println("Matricula: "+matricula);
-		System.out.println("Kilometros: "+kilometros);
-		System.out.println("Deposito: "+deposito);
-	}
-	
-	//El vehículo se desplaza 25km
-	@Override
-	public void avance() {
-		if (deposito >= 1) {
-			deposito -= 1;
-			kilometros += 25;
-			System.out.println("La moto se desplaza 25km");
-		} else {
-			System.out.println("No tiene suficiente gasolina");
-		}
-	}
-	
-	//Llena el deposito del vehículo
-	@Override
-	public void llenado() {
-		if (deposito < 15) {
-			deposito = 15;
-			System.out.println("Deposito lleno a su maxima capacidad de "+deposito+"L");
-		} else {
-			System.out.println("El deposito ya esta lleno");
-		}
-	}
-
 }
