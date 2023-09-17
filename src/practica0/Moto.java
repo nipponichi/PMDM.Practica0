@@ -1,6 +1,6 @@
 package practica0;
 
-//Clase moto hereda de vehículo
+//Clase Moto hereda de vehículo
 public class Moto extends Vehiculo {
 	private String marca = "Ural";
 	private String matricula = "6469CLK";
@@ -24,7 +24,6 @@ public class Moto extends Vehiculo {
 		System.out.println("Matricula: "+matricula);
 		System.out.println("Kilometros: "+kilometros);
 		System.out.println("Deposito: "+deposito);
-		System.out.println("************************");
 	}
 	
 	//El vehículo se desplaza 25km
@@ -33,7 +32,7 @@ public class Moto extends Vehiculo {
 		if (deposito >= 1) {
 			deposito -= 1;
 			kilometros += 25;
-			System.out.println("El vehiculo se desplaza 25km");
+			System.out.println("La moto se desplaza 25km");
 		} else {
 			System.out.println("No tiene suficiente gasolina");
 		}

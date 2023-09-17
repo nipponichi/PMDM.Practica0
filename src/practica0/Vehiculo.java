@@ -95,7 +95,7 @@ public abstract class Vehiculo {
 					llenarDeposito();
 					break;
 				case 4:
-					System.out.println("Cerrando programa");
+					System.out.println("Gracias por utilizar nuestro software");
 					System.exit(0);
 				default:
 					System.out.println("Selecciona una opcion valida");
@@ -116,6 +116,9 @@ public abstract class Vehiculo {
 		coche.avance();
 		moto.avance();
 		camion.avance();
+		System.out.println("************************"
+				+ "\nEstado de los vehiculos actualizado:");
+		infoVehiculo();
 		menu();
 	}
 	

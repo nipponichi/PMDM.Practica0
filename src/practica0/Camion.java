@@ -1,6 +1,6 @@
 package practica0;
 
-//Clase camión hereda de vehículo
+//Clase Camion hereda de vehículo
 public class Camion extends Vehiculo {
 	private String marca = "Gaz";
 	private String matricula = "5123MGJ";
@@ -33,7 +33,7 @@ public class Camion extends Vehiculo {
 		if (deposito >= 3) {
 			deposito -= 3;
 			kilometros += 25;
-			System.out.println("El vehiculo se desplaza 25km");
+			System.out.println("El camion se desplaza 25km");
 		} else {
 			System.out.println("No tiene suficiente gasolina");
 		}
