@@ -5,12 +5,13 @@ import java.util.Scanner;
 //Clase vehículo
 public abstract class Vehiculo {
 	
+	private final int DISTANCIA = 25;
+	
 	private String tipo;
 	private String marca;
 	private String matricula;
 	private long kilometros;
 	private int deposito;
-	private int distancia;
 	private int consumo;
 	private int depositoLleno;
 	
@@ -47,11 +48,11 @@ public abstract class Vehiculo {
     public void avance() {
 		if (deposito >= consumo) {
 			deposito -= consumo;
-			kilometros += distancia;
-			System.out.println("El "+tipo+" se desplaza "+distancia+"km");
+			kilometros += DISTANCIA;
+			System.out.println("El "+tipo+" se desplaza "+DISTANCIA+"km");
 		} else {
 			System.out.println("El vehiculo no tiene suficiente gasolina para"
-					+ "recorrer los "+distancia+"km");
+					+ "recorrer los "+DISTANCIA+"km");
 		}
     }
     
@@ -107,11 +108,7 @@ public abstract class Vehiculo {
 	}
 
 	public int getDistancia() {
-		return distancia;
-	}
-
-	public void setDistancia(int distancia) {
-		this.distancia = distancia;
+		return DISTANCIA;
 	}
 
 	public int getConsumo() {
@@ -170,13 +167,15 @@ public abstract class Vehiculo {
 		sc.close();
 	}
 	
+	//Muestra info de vehículos
 	static void infoVehiculo() {
 		coche.info();
 		moto.info();
 		camion.info();
 		menu();
 	}
-
+	
+	//Los vehículos recorren 25km
 	static void avanzarVehiculo() {
 		coche.avance();
 		moto.avance();
@@ -187,6 +186,7 @@ public abstract class Vehiculo {
 		menu();
 	}
 	
+	//Llena el depósito de los vehículos
 	static void llenarDeposito() {
 		coche.llenado();
 		moto.llenado();
@@ -194,6 +194,7 @@ public abstract class Vehiculo {
 		menu();
 	}
 	
+	//Cierra la aplicación
 	static void cerrarPrograma() {
 		System.out.println("Gracias por utilizar nuestro software");
 		System.exit(0);

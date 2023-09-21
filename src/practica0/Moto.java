@@ -2,24 +2,22 @@ package practica0;
 
 //Clase Moto hereda de vehículo
 public class Moto extends Vehiculo {
-	private String tipo = "Moto";
-	private String marca = "Ural";
-	private String matricula = "6469CLK";
-	private long kilometros = 16000;
-	private int deposito = 15;
-	private int consumo = 1;
-	private int distancia = 25;
-	private int depositoLleno = deposito;
+	private final String TIPO = "Moto";
+	private final String MARCA = "Ural";
+	private final String MATRICULA = "6469CLK";
+	private final int CONSUMO = 1;
+	private final long KILOMETROS = 16000;
+	private final int DEPOSITO = 15;
+	private final int DEPOSITO_LLENO = DEPOSITO;
 			
 	//Constructor clase Moto
 	Moto(){
-		setTipo(tipo);
-		setMarca(marca);
-		setMatricula(matricula);
-		setKilometros(kilometros);
-		setDeposito(deposito);
-		setConsumo(consumo);
-		setDistancia(distancia);
-		setDepositoLleno(depositoLleno);
+		setTipo(TIPO);
+		setMarca(MARCA);
+		setMatricula(MATRICULA);
+		setKilometros(KILOMETROS);
+		setDeposito(DEPOSITO);
+		setConsumo(CONSUMO);
+		setDepositoLleno(DEPOSITO_LLENO);
 	}
 }

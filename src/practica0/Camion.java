@@ -2,24 +2,22 @@ package practica0;
 
 //Clase Camion hereda de vehículo
 public class Camion extends Vehiculo {
-	private String tipo = "Camion";
-	private String marca = "Gaz";
-	private String matricula = "5123MGJ";
-	private long kilometros = 450000;
-	private int deposito = 100;
-	private int consumo = 3;
-	private int distancia = 25;
-	private int depositoLleno = deposito;
+	private final String TIPO = "Camion";
+	private final String MARCA = "Gaz";
+	private final String MATRICULA = "5123MGJ";
+	private final int CONSUMO = 3;
+	private final long KILOMETROS = 450000;
+	private final int DEPOSITO = 100;
+	private final int DEPOSITO_LLENO = DEPOSITO;
 	
 	//Constructor clase Camión
 	Camion(){
-		setTipo(tipo);
-		setMarca(marca);
-		setMatricula(matricula);
-		setKilometros(kilometros);
-		setDeposito(deposito);
-		setConsumo(consumo);
-		setDistancia(distancia);
-		setDepositoLleno(depositoLleno);
+		setTipo(TIPO);
+		setMarca(MARCA);
+		setMatricula(MATRICULA);
+		setKilometros(KILOMETROS);
+		setDeposito(DEPOSITO);
+		setConsumo(CONSUMO);
+		setDepositoLleno(DEPOSITO_LLENO);
 	}
 }
